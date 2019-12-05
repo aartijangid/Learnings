@@ -1,0 +1,17 @@
+MongoDB Atlas
+    Easy way to host and manage your data in the cloud. 
+    Creating a cluster, connecting to it, inserting data, and querying data.
+
+Use user guide 
+    https://docs.atlas.mongodb.com/getting-started/
+
+Deployed a Free Tier Cluster after creation of Atlas account. 
+    Sample_cluster_name:credentials = rt_usr_cluser_1:rt_usr_cluser_1
+
+Java Connection: 
+
+    MongoClientURI uri = new MongoClientURI(
+        "mongodb+srv://rt_usr_cluser_1:<password>@rt-cluster-1-da72r.mongodb.net/test?retryWrites=true&w=majority");
+
+    MongoClient mongoClient = new MongoClient(uri);
+    MongoDatabase database = mongoClient.getDatabase("test");
