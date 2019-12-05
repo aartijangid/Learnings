@@ -15,3 +15,6 @@ Java Connection:
 
     MongoClient mongoClient = new MongoClient(uri);
     MongoDatabase database = mongoClient.getDatabase("test");
+
+Hands on github link: 
+    https://github.com/aartijangid/TestUrSkills/tree/master/src/test/java/connect/mongodb
