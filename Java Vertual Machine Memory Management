@@ -1,0 +1,64 @@
+Java Vertual Machine Memory Management
+    Garbage collection
+    Garbage Collection deals with finding and deleting the garbage from memory.
+    Garbage Collection tracks each and every object available in the JVM heap space and removes unused or unreferenced ones.
+
+Types of Garbase collection
+    Do Nothing 
+        never to run
+    Reference counting GC 
+        add Reference and decerement Reference, when count is 0. GC collects the object
+        Problem with this type of GC: If there are two objects referencing each other, 
+        their referencing count will never be 0 and will never be free
+    Mark and sweep GC
+        mark: garbage collector identifies which pieces of memory are in use and which are not
+        sweep: removes objects identified during the “mark” phase
+        compact: compact the memory
+    Copying GC
+        marks the referenced and unreferenced object and while sweeping, copies the referenced objects from "from space" 
+        to "to space". And then "to space" becomes "from space" for next garbage collection
+    Generational GC
+        if an object survives one GC, it will not be checked again for a while assuming it may be used a little longer
+    Inremental GC
+        doesnt look all the memory all the time
+
+JVM has four types of GC implementations:
+    1. Serial Garbage Collector
+    2. Parallel Garbage Collector
+    3. CMS Garbage Collector
+    4. G1 Garbage Collector
+
+Things to consider for GC 
+    - What happens when GC frees memory, will the JVM stop
+    - memory fragmentation or de-fragmentation during GC
+    - which type of GC is suitable
+
+
+JVM have
+    memory space broken down:
+        young generation (Eden Space) and old generation
+    Survivor  spaces - two, only one is in use at a time
+        the objects which survives the GC moved to Survivor space. 
+    the objects in the young generation lives shorter life
+
+Memory allocation
+    new objects are allocated in Eden space or young generation
+    Minor GC happens when eden space is full, fast can happens frequently
+    major GC is slow, is triggered when old generation space is full and works on whole memory.
+
+Memory allocation in JAVA
+    Memory is divided into 
+        1. stack
+            holds methods, local variables(stores value types, primitives) and references to heap objects
+            multiple stack memories- each thread has its own stack memory
+            as soon as a thread is created, it has its own memory stack. 
+
+        2. Heap(larger compared to stack)
+            hols the actual objects (referenced by the variables in stack) in the memory
+        
+JVM divides memory into following sections:
+    1. The code section contains your bytecode.
+    2. The Stack section of memory contains methods, local variables, and reference variables.
+    3. The Heap section contains Objects (may also contain reference variables).
+    4. The Static section contains Static data/methods.
+    
