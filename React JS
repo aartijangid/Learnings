@@ -1,0 +1,21 @@
+Learning React JS
+
+To Install Node.js on MacOS    
+    brew install node
+
+Check version of Node.js installed 
+     node -v
+
+To create new application
+    npx create-react-app <application_name>
+
+Note
+    npx is a package runner tool that comes with npm 5.2+.
+
+To start application
+    npm start
+
+To build application   
+    npm run build
+
+
