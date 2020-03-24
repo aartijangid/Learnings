@@ -29,5 +29,5 @@ Assess your architecture
     The platform assesses what you have built and identifies what needs to be improved. It reduce architectural and organizational 
     risk and maximizes the benefits of the microservice architecture.
 
-Monolithic architecture - architect an application as a single deployable unit.
+Monolithic architecture - architect an application as a single deployable unit
 Microservice architecture - architect an application as a collection of loosely coupled, services.
