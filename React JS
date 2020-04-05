@@ -1,10 +1,35 @@
-Learning React JS
+React:
+    is an open source JavaScript Library for building rich User Interface.
+    has a Component Based Architecture
+    helps write Reusable Code
+    is Declarative 
+        Means "tell React what you want and React will build the actual UI"
+        Oposite is Imperative paradigm where you control the flow of layout and explicitly tell the steps
+    handles efficiently updating and rendering the Components
+    can be seamlessly integrated into any application
 
+Prerequisites
+    HTML
+    CSS
+    JavaScript - 'this' keyword, filter, map and reduce
+    ES6 Features - let & const, arrow functions, template literals, default parameter, object literals, rest and spread operators
+        and destructuring assignments
+
+Insall nodejs and any IDE
+
+Course: Fundamentals
+        HTTP
+        Routing
+        Redux
+        Utilities
+        
 To Install Node.js on MacOS    
     brew install node
 
 Check version of Node.js installed 
      node -v
+
+npx : is a npm package runner gets installed with nodejs.
 
 To create new application
     npx create-react-app <application_name>
@@ -12,10 +37,14 @@ To create new application
 Note
     npx is a package runner tool that comes with npm 5.2+.
 
-To start application
+To install required packages and start application
+    npm install
     npm start
 
-To build application   
+To create a production build of this application   
     npm run build
+
+    
+
 
 
